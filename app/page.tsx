@@ -1,65 +1,374 @@
-import Image from "next/image";
+'use client';
+import Link from 'next/link';
+import Logo from './components/Logo';
+import Scribble from './components/Scribble';
 
 export default function Home() {
+  const features = [
+    {
+      svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" /></svg>,
+      color: '#1a73e8',
+      bg: '#e8f0fe',
+      title: 'Google Blue Identity',
+      desc: <>A tonal color system built on Google's <span style={{ color: '#1a73e8', fontWeight: 700 }}>#1a73e8</span>, with M3-compliant containers, surfaces, and state layers.</>,
+    },
+    {
+      svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7" rx="3.5"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>,
+      color: '#e8710a',
+      bg: '#fce8b2',
+      title: 'Material 3 Components',
+      desc: 'Every Bootstrap component reskinned to Material 3 standards — buttons, cards, chips, dialogs, and more.',
+    },
+    {
+      svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></svg>,
+      color: '#1e8e3e',
+      bg: '#e6f4ea',
+      title: 'Bootstrap 5 Core',
+      desc: 'Write familiar Bootstrap markup. Zero JavaScript changes. Drop in the CSS and your app is Materialized.',
+    },
+    {
+      svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line><rect x="15" y="11" width="7" height="10" rx="1.5" fill="#f3e8fd"></rect></svg>,
+      color: '#a142f4',
+      bg: '#f3e8fd',
+      title: 'Fully Responsive',
+      desc: 'Mobile-first layouts that adapt gracefully. The same Material experience on every screen size.',
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div style={{ fontFamily: "'Roboto', sans-serif", color: '#202124', background: '#fff' }}>
+
+      {/* ── NAVBAR ── */}
+      <nav style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+        background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid #f1f3f4',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '0 clamp(1.5rem, 5vw, 4rem)', height: '64px',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Logo size={28} />
+          <span style={{ fontWeight: 700, fontSize: '1.1rem', letterSpacing: '-0.02em', color: '#202124' }}>
+            Rence <span style={{ color: '#1a73e8' }}>Material</span>
+          </span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <a href="#features" style={{ fontSize: '0.8125rem', color: '#5f6368', textDecoration: 'none', fontWeight: 500 }}>Features</a>
+          <a href="#getting-started" style={{ fontSize: '0.8125rem', color: '#5f6368', textDecoration: 'none', fontWeight: 500 }}>Get started</a>
+          <Link href="/docs/introduction" style={{
+            background: '#1a73e8', color: '#fff', padding: '6px 24px',
+            borderRadius: '4px', fontSize: '0.8125rem', fontWeight: 600,
+            textDecoration: 'none', letterSpacing: '0.04em', display: 'inline-flex', alignItems: 'center'
+          }}>
+            DOCS
+          </Link>
+        </div>
+      </nav>
+
+      {/* ── HERO ── */}
+      <section style={{
+        minHeight: '100vh', paddingTop: '64px',
+        display: 'flex', alignItems: 'center',
+        background: '#fff',
+        overflow: 'hidden', position: 'relative',
+      }}>
+        {/* Left: Text */}
+        <div style={{
+          flex: 1, padding: 'clamp(2rem, 4vw, 4rem) clamp(1.5rem, 5vw, 5rem)',
+          maxWidth: '620px', position: 'relative', zIndex: 2,
+        }}>
+          {/* Pill badge */}
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: '#e8f0fe', borderRadius: '50px',
+            padding: '6px 16px', marginBottom: '2rem',
+          }}>
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#1a73e8', display: 'inline-block' }}></span>
+            <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#1a73e8', letterSpacing: '0.06em' }}>
+              BASED ON GOOGLE MATERIAL DESIGN · BOOTSTRAP 5
+            </span>
+          </div>
+
+          <h1 style={{
+            fontSize: 'clamp(2.8rem, 6vw, 5.5rem)',
+            fontWeight: 300,
+            lineHeight: 1.08,
+            letterSpacing: '-0.04em',
+            color: '#202124',
+            margin: '0 0 1rem 0',
+          }}>
+            Build with<br />
+            <span style={{ color: '#1a73e8', fontWeight: 400 }}>Material</span><br />
+            <span style={{ fontWeight: 300 }}>Design.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p style={{
+            fontSize: 'clamp(1rem, 2vw, 1.15rem)', lineHeight: 1.6,
+            color: '#5f6368', maxWidth: '480px', margin: '0 0 2rem 0', fontWeight: 400,
+          }}>
+            A fully responsive, Google Material 3 skin for Bootstrap 5.
+            Drop in one CSS file — every component transforms instantly.
           </p>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '2rem', alignItems: 'flex-start' }}>
+            <div className="d-flex flex-column align-items-start">
+              <Link href="/docs/introduction" style={{
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                background: '#1a73e8', color: '#fff',
+                padding: '0 24px', borderRadius: '4px',
+                fontWeight: 600, fontSize: '0.8125rem', letterSpacing: '0.04em',
+                textDecoration: 'none', boxShadow: '0 2px 8px rgba(26,115,232,0.3)',
+                transition: 'all 0.2s', minHeight: '40px'
+              }}>
+                <span className="material-icons" style={{ fontSize: '18px' }}>menu_book</span>
+                GET STARTED
+              </Link>
+              <Scribble text="Start here!" arrow="up" className="mt-3 ms-2" />
+            </div>
+            <a href="#" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: 'transparent', color: '#1a73e8',
+              padding: '0 24px', borderRadius: '4px',
+              fontWeight: 600, fontSize: '0.8125rem', letterSpacing: '0.04em',
+              textDecoration: 'none', border: '1px solid #dadce0', minHeight: '40px'
+            }}>
+              <span className="material-icons" style={{ fontSize: '18px' }}>download</span>
+              DOWNLOAD
+            </a>
+          </div>
+
+          {/* Stats row */}
+          <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
+            {[
+              { val: 'v1.5', label: 'Stable release' },
+              { val: 'BS5', label: 'Bootstrap core' },
+              { val: 'M3', label: 'Material 3' },
+            ].map(s => (
+              <div key={s.val}>
+                <div style={{ fontSize: '1.4rem', fontWeight: 700, color: '#202124', lineHeight: 1 }}>{s.val}</div>
+                <div style={{ fontSize: '0.75rem', color: '#9aa0a6', fontWeight: 500, marginTop: '4px', letterSpacing: '0.04em' }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Right: UI Component Showcase (No AI Art) */}
+        <div style={{
+          flex: 1, minHeight: '100vh',
+          position: 'relative', overflow: 'hidden',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          {/* Background tint */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%)',
+          }}></div>
+
+          <div style={{ position: 'relative', width: '480px', height: '480px' }}>
+            {/* Background Container Sheet */}
+            <div style={{
+              position: 'absolute', width: '420px', height: '360px',
+              borderRadius: '24px', background: '#d2e3fc',
+              top: '60px', left: '30px',
+              transform: 'rotate(-4deg)',
+              boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.5)',
+            }}></div>
+
+            {/* Floating Top Card (Material Data Card) */}
+            <div style={{
+              position: 'absolute', width: '320px', background: '#fff',
+              borderRadius: '16px', padding: '24px',
+              top: '40px', right: '40px',
+              boxShadow: '0 12px 32px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04)',
+              transform: 'rotate(2deg)',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#1a73e8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <span className="material-icons" style={{ fontSize: '20px' }}>person</span>
+                </div>
+                <div>
+                  <div style={{ fontWeight: 600, fontSize: '0.9rem', color: '#202124' }}>Material User Profile</div>
+                  <div style={{ fontSize: '0.75rem', color: '#5f6368' }}>Bootstrap 5 Card layout</div>
+                </div>
+              </div>
+
+              <div style={{ background: '#f8f9fa', height: '8px', borderRadius: '4px', width: '100%', marginBottom: '12px' }}></div>
+              <div style={{ background: '#f8f9fa', height: '8px', borderRadius: '4px', width: '70%', marginBottom: '24px' }}></div>
+
+              <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+                <div style={{ padding: '8px 16px', color: '#1a73e8', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.04em' }}>CANCEL</div>
+                <div style={{ padding: '8px 24px', background: '#e8f0fe', color: '#1a73e8', borderRadius: '40px', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.04em' }}>SAVE</div>
+              </div>
+            </div>
+
+            {/* Floating Notification/Snackbar */}
+            <div style={{
+              position: 'absolute', width: '300px', background: '#202124',
+              borderRadius: '8px', padding: '14px 20px',
+              bottom: '80px', left: '20px',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              transform: 'rotate(-1deg)',
+            }}>
+              <span style={{ color: '#f8f9fa', fontSize: '0.85rem' }}>Preferences updated</span>
+              <span style={{ color: '#8ab4f8', fontWeight: 600, fontSize: '0.8rem', letterSpacing: '0.04em' }}>UNDO</span>
+            </div>
+
+            {/* Floating Floating Action Button (FAB) */}
+            <div style={{
+              position: 'absolute', width: '64px', height: '64px',
+              borderRadius: '20px', background: '#1a73e8',
+              bottom: '140px', right: '50px',
+              boxShadow: '0 8px 16px rgba(26,115,232,0.3)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              color: '#fff'
+            }}>
+              <span className="material-icons" style={{ fontSize: '28px' }}>add</span>
+            </div>
+
+            {/* Floating Input Field Mockup */}
+            <div style={{
+              position: 'absolute', width: '260px', background: '#fff',
+              border: '1px solid #dadce0', borderRadius: '4px', padding: '16px 16px 8px 16px',
+              top: '220px', left: '-10px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+              borderBottom: '2px solid #1a73e8'
+            }}>
+              <div style={{ fontSize: '0.7rem', color: '#1a73e8', fontWeight: 500, position: 'absolute', top: '-8px', left: '12px', background: '#fff', padding: '0 4px' }}>Email address</div>
+              <div style={{ fontSize: '0.9rem', color: '#202124' }}>rence@bliteoc.com</div>
+            </div>
+
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* ── FEATURES ── */}
+      <section id="features" style={{ background: '#f8f9fa', padding: 'clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div style={{
+              fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em',
+              color: '#1a73e8', textTransform: 'uppercase', marginBottom: '12px',
+            }}>WHY RENCE MATERIAL</div>
+            <div className="mb-4 text-center">
+              <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 300, letterSpacing: '-0.03em', color: '#202124', margin: 0 }}>
+                Everything you need to build<br />with Material Design.
+              </h2>
+              <Scribble text="Modern & Clean" arrow="up" className="mt-4" />
+            </div>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
+            {features.map((f, i) => (
+              <div key={i} style={{
+                background: '#fff', borderRadius: '16px',
+                padding: '32px 28px', border: '1px solid #e8eaed',
+                transition: 'box-shadow 0.2s, transform 0.2s',
+              }}>
+                <div style={{
+                  width: 52, height: 52, borderRadius: '14px',
+                  background: f.bg, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  marginBottom: '20px',
+                }}>
+                  <div style={{ color: f.color, display: 'flex', width: '24px', height: '24px' }}>
+                    {f.svg}
+                  </div>
+                </div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#202124', margin: '0 0 10px 0', letterSpacing: '-0.01em' }}>{f.title}</h3>
+                <p style={{ fontSize: '0.875rem', color: '#5f6368', margin: 0, lineHeight: 1.7 }}>{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── GETTING STARTED TEASER ── */}
+      <section id="getting-started" style={{ background: '#fff', padding: 'clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem)' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', gap: '3rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ flex: 1, minWidth: '260px' }}>
+            <div style={{
+              fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em',
+              color: '#1a73e8', textTransform: 'uppercase', marginBottom: '12px',
+            }}>QUICK START</div>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.03em', color: '#202124', margin: '0 0 1rem 0' }}>
+              One file.<br />Endless possibilities.
+            </h2>
+            <p style={{ fontSize: '1rem', color: '#5f6368', lineHeight: 1.7, margin: '0 0 2rem 0' }}>
+              Replace your Bootstrap CSS with Rence Material CSS. That&apos;s it.
+              Your existing markup instantly gains a polished Material 3 look.
+            </p>
+            <Link href="/docs/introduction" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: '#1a73e8', color: '#fff',
+              padding: '8px 24px', borderRadius: '4px',
+              fontWeight: 600, fontSize: '0.8125rem', letterSpacing: '0.04em',
+              textDecoration: 'none',
+            }}>
+              READ THE DOCS
+              <span className="material-icons" style={{ fontSize: '16px' }}>arrow_forward</span>
+            </Link>
+          </div>
+
+          {/* Code preview */}
+          <div style={{ flex: 1, minWidth: '280px' }}>
+            <div style={{
+              background: '#202124', borderRadius: '16px', overflow: 'hidden',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+            }}>
+              <div style={{
+                background: '#303134', padding: '12px 20px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+              }}>
+                {['#ea4335', '#fbbc04', '#34a853'].map((c, i) => (
+                  <div key={i} style={{ width: 12, height: 12, borderRadius: '50%', background: c }}></div>
+                ))}
+                <span style={{ fontSize: '0.75rem', color: '#9aa0a6', marginLeft: '8px', fontFamily: 'monospace' }}>index.html</span>
+              </div>
+              <pre style={{
+                margin: 0, padding: '24px', fontSize: '0.8rem',
+                lineHeight: 1.8, fontFamily: "'Roboto Mono', monospace",
+                overflowX: 'auto', color: '#e8eaed',
+              }}>{`<link rel="stylesheet" href=
+  "https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/css/rence-material.min.css">
+
+<!-- That's it! All your Bootstrap
+     markup is now Material 3 -->
+
+<button class="btn btn-primary">
+  Filled Button
+</button>
+
+<div class="card">
+  <div class="card-body">
+    Material card ✓
+  </div>
+</div>`}</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER ── */}
+      <footer style={{
+        background: '#f8f9fa', borderTop: '1px solid #e8eaed',
+        padding: '2.5rem clamp(1.5rem, 5vw, 4rem)',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Logo size={24} />
+          <span style={{ fontWeight: 600, fontSize: '0.9rem', color: '#5f6368' }}>
+            Rence Material <span style={{ color: '#9aa0a6', fontWeight: 400 }}>v1.5.0</span>
+          </span>
+        </div>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <a href="#" style={{ fontSize: '0.8rem', color: '#9aa0a6', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span className="material-icons" style={{ fontSize: '16px' }}>code</span> Fork on GitHub
+          </a>
+          <span style={{ fontSize: '0.8rem', color: '#9aa0a6', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span className="material-icons" style={{ fontSize: '16px', color: '#ea4335' }}>favorite</span> Made by Rence
+          </span>
+        </div>
+      </footer>
+
     </div>
   );
 }

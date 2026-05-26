@@ -1,0 +1,81 @@
+// Rence Material Core
+// Imports Bootstrap and applies Material 3 skin
+
+// 1. Mandatory overrides
+@import "variables-bootstrap";
+@import "variables-material";
+
+// 2. Import Bootstrap
+// Note: In a real project, you would import bootstrap from node_modules.
+// We'll use a relative path if possible or assume it's installed.
+@import "bootstrap/scss/bootstrap";
+
+// 3. Material Component Overrides & Extensions
+.z-0 { box-shadow: map-get($elevation-shadows, 0) !important; }
+.z-1 { box-shadow: map-get($elevation-shadows, 1) !important; }
+.z-2 { box-shadow: map-get($elevation-shadows, 2) !important; }
+.z-3 { box-shadow: map-get($elevation-shadows, 3) !important; }
+.z-4 { box-shadow: map-get($elevation-shadows, 4) !important; }
+.z-5 { box-shadow: map-get($elevation-shadows, 5) !important; }
+
+// Ripple Effect Base CSS
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+  }
+
+  &:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+  }
+}
+
+// FAB (Floating Action Button)
+.btn-fab {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend .z-3;
+  transition: box-shadow 0.2s $material-standard-easing;
+
+  &:hover {
+    @extend .z-4;
+  }
+
+  &.btn-fab-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+}
+
+// Navigation Drawer
+.navdrawer {
+  width: 360px;
+  height: 100%;
+  background: $md-sys-color-surface-container;
+  @extend .z-1;
+  transition: transform 0.3s $material-standard-easing;
+}

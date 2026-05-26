@@ -1,0 +1,35 @@
+// Material 3 Specific Design Tokens
+
+// Elevation Shadows (MD3 logic)
+// Level 0: No shadow
+// Level 1: 1dp
+// Level 2: 3dp
+// Level 3: 6dp
+// Level 4: 8dp
+// Level 5: 12dp
+
+$elevation-shadows: (
+  0: none,
+  1: (0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15)),
+  2: (0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15)),
+  3: (0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3)),
+  4: (0 6px 10px 4px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3)),
+  5: (0 8px 12px 6px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.3))
+);
+
+// MD3 Color Tokens (Surface, On-Surface, etc.)
+$md-sys-color-surface: #FEF7FF;
+$md-sys-color-on-surface: #1D1B20;
+$md-sys-color-surface-container: #F3EDF7;
+$md-sys-color-surface-container-high: #ECE6F0;
+
+// State Layer Opacities
+$hover-state-layer-opacity: 0.08;
+$focus-state-layer-opacity: 0.12;
+$pressed-state-layer-opacity: 0.12;
+$dragged-state-layer-opacity: 0.16;
+
+// Transitions
+$material-standard-easing: cubic-bezier(0.2, 0, 0, 1);
+$material-accelerate-easing: cubic-bezier(0.3, 0, 1, 1);
+$material-decelerate-easing: cubic-bezier(0, 0, 0, 1);

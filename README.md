@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rence Material
 
-## Getting Started
+A powerful, high-performance front-end framework that fuses the functional stability of **Bootstrap 5** with the visual elegance of **Google Material Design 3**.
 
-First, run the development server:
+**[📖 Official Documentation & Live Demos](https://davidabalaku.github.io/material)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Developed and designed by **David Abalaku**.
+
+---
+
+## ⚡ Quick Start (CDN)
+
+You can drop Rence Material into any project instantly using jsDelivr. Since the framework relies purely on CSS for Material interactions, simply include the compiled stylesheet inside your `<head>` alongside standard Bootstrap 5.
+
+```html
+<!-- Rence Material Framework CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/css/rence-material.min.css">
+<!-- Rence Material Ripple Engine JS -->
+<script src="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/js/rence-material.min.js"></script>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Starter Template
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Here is a bare-bones HTML template to get you up and running immediately:
 
-## Learn More
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rence Material App</title>
 
-To learn more about Next.js, take a look at the following resources:
+    <!-- 1. Google Fonts & Material Icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    <!-- 2. Rence Material Framework CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/css/rence-material.min.css">
+  </head>
+  <body>
+    
+    <div class="container py-5">
+      <h1 class="fw-light text-primary mb-4">Hello, Material!</h1>
+      <button class="btn btn-primary d-inline-flex align-items-center gap-2">
+        <span class="material-icons">rocket_launch</span>
+        Get Started
+      </button>
+      <button class="btn btn-tonal">Tonal Button</button>
+    </div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    <!-- 3. Bootstrap 5 Core JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin></script>
 
-## Deploy on Vercel
+    <!-- 4. Rence Material Ripple Engine JS -->
+    <script src="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/js/rence-material.min.js"></script>
+  </body>
+</html>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+Authored and maintained by **David Abalaku**. 
+Based upon Bootstrap 5 and Google Material Design principles.
