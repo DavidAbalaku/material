@@ -15,9 +15,9 @@ You can drop Rence Material into any project instantly using jsDelivr. Since the
 
 ```html
 <!-- Rence Material Framework CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/css/rence-material.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidabalaku/material@v1.5.0/dist/css/rence-material.min.css">
 <!-- Rence Material Ripple Engine JS -->
-<script src="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/js/rence-material.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davidabalaku/material@v1.5.0/dist/js/rence-material.min.js"></script>
 ```
 
 ---
@@ -41,7 +41,7 @@ Here is a bare-bones HTML template to get you up and running immediately:
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin>
 
     <!-- 2. Rence Material Framework CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/css/rence-material.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidabalaku/material@v1.5.0/dist/css/rence-material.min.css">
   </head>
   <body>
     
@@ -58,7 +58,7 @@ Here is a bare-bones HTML template to get you up and running immediately:
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin></script>
 
     <!-- 4. Rence Material Ripple Engine JS -->
-    <script src="https://cdn.jsdelivr.net/gh/davidabalaku/material@main/dist/js/rence-material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidabalaku/material@v1.5.0/dist/js/rence-material.min.js"></script>
   </body>
 </html>
 ```
