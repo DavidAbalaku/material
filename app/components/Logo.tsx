@@ -12,7 +12,7 @@ export default function Logo({ size = 32, className = '' }: { size?: number, cla
       <path d="M50 14 L86 32 L50 50 L14 32 Z" fill="#DBDEE6" />
 
       {/* Left Structured Block */}
-      <path d="M14 36 L48 53 V86 L14 68 Z" fill="#4285F4" />
+      <path d="M14 36 L48 53 V86 L14 68 Z" fill="#2a4b8d" />
 
       {/* Right Core Block */}
       <path d="M86 36 L52 53 V86 L86 68 Z" fill="#152d61" />

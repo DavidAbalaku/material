@@ -2,7 +2,7 @@
   "name": "rence-material",
   "version": "1.0.0",
   "description": "A high-performance Google Material Design 3 framework built on Bootstrap 5.",
-  "author": "David Abalaku",
+  "author": "david abalaku",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -3,8 +3,8 @@ import CodeBlock from '@/app/components/CodeBlock';
 import Scribble from '@/app/components/Scribble';
 
 const themeCode = `// 1. Set your custom theme variables
-$primary: #152d61; // Google Blue
-$secondary: #5f6368; // Google Gray
+$primary: #152d61; // Rence Blue
+$secondary: #5f6368; // Rence Gray
 $accent: #f4b400; // Material Gold
 
 // 2. Import Rence Material (which imports Bootstrap)

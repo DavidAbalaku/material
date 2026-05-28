@@ -4,7 +4,7 @@ A powerful, high-performance front-end framework that fuses the functional stabi
 
 **[📖 Official Documentation & Live Demos](https://davidabalaku.github.io/material)**
 
-Developed and designed by **David Abalaku**.
+Developed and designed by **david abalaku**.
 
 ---
 
@@ -63,5 +63,5 @@ Here is a bare-bones HTML template to get you up and running immediately:
 ```
 
 ## 📄 License
-Authored and maintained by **David Abalaku**. 
+Authored and maintained by **david abalaku**. 
 Based upon Bootstrap 5 and Google Material Design principles.

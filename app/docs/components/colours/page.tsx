@@ -35,7 +35,7 @@ export default function Colours() {
           <section id="tonal-system" className="mb-5 pb-4">
             <div className="d-flex align-items-center gap-3 mb-4">
               <h2 className="h4 fw-light mb-0 text-dark">M3 Tonal System</h2>
-              <Scribble text="Google Blue Identity" arrow="left" />
+              <Scribble text="Rence Material Identity" arrow="left" />
             </div>
 
             <div className="card shadow-none border rounded-4 overflow-hidden mb-4">
@@ -59,7 +59,7 @@ export default function Colours() {
               </div>
               <div className="p-4 bg-light-subtle">
                 <p className="text-secondary small mb-3">
-                  Our tonal system maps to standard Material 3 roles, ensuring consistent contrast and a professional Google-inspired palette.
+                  Our tonal system maps to standard Material 3 roles, ensuring consistent contrast and a professional Rence-inspired palette.
                 </p>
                 <Scribble text="Accessible pairings!" arrow="left" />
               </div>

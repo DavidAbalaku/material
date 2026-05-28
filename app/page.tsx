@@ -9,8 +9,8 @@ export default function Home() {
       svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" /></svg>,
       color: '#152d61',
       bg: '#DBDEE6',
-      title: 'Google Blue Identity',
-      desc: <>A tonal color system built on Google's <span style={{ color: '#152d61', fontWeight: 700 }}>#152d61</span>, with M3-compliant containers, surfaces, and state layers.</>,
+      title: 'Rence Material Identity',
+      desc: <>A tonal color system built on the official Rence <span style={{ color: '#152d61', fontWeight: 700 }}>#152d61</span>, with M3-compliant containers, surfaces, and state layers.</>,
     },
     {
       svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7" rx="3.5"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>,
