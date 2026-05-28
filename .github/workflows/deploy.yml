@@ -28,7 +28,7 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit
+        run: npm install --no-audit
         
       - name: Build Framework & Docs
         run: npm run build
