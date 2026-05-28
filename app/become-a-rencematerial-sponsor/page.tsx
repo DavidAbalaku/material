@@ -119,12 +119,7 @@ export default function SponsorPage() {
         ))}
       </div>
 
-      {/* ── FOOTER TEASER ── */}
-      <div style={{ maxWidth: '800px', margin: '60px auto 0', padding: '40px 20px', textAlign: 'center', borderTop: '1px solid #f1f3f4' }}>
-        <p style={{ color: '#9aa0a6', fontStyle: 'italic' }}>
-          Questions about sponsorship? Contact us at support@rence.com
-        </p>
-      </div>
+   
 
       {/* ── GLOBAL FOOTER ── */}
       <footer style={{
