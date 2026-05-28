@@ -62,14 +62,9 @@ export default function Home() {
         {/* Left: Text */}
         <div className="hero-content">
           {/* Pill badge */}
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: '#DBDEE6', borderRadius: '50px',
-            padding: '6px 16px', marginBottom: '2rem',
-            lineHeight: 1
-          }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#152d61', flexShrink: 0 }}></span>
-            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#152d61', letterSpacing: '0.05em', lineHeight: '1' }}>
+          <div className="hero-badge">
+            <span className="hero-badge-dot"></span>
+            <span className="hero-badge-text">
               BASED ON GOOGLE MATERIAL DESIGN · BOOTSTRAP 5
             </span>
           </div>
@@ -96,20 +91,18 @@ export default function Home() {
           </p>
 
           <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%' }}>
-            <Link href="/become-a-rencematerial-sponsor" style={{ 
+            <Link href="/become-a-rencematerial-sponsor" className="mobile-hide" style={{ 
               color: '#ad2b53', 
-              display: 'inline-flex', 
+              fontSize: '0.9rem', 
+              fontWeight: 600, 
+              display: 'flex', 
               alignItems: 'center', 
-              justifyContent: 'center',
-              gap: '8px', 
+              gap: '8px',
               textDecoration: 'none',
-              fontSize: '0.875rem',
-              fontWeight: 500,
-              width: '100%',
-              textAlign: 'center'
+              borderBottom: '1px dashed #ad2b53',
+              paddingBottom: '2px'
             }}>
-              <span className="material-icons" style={{ fontSize: '20px' }}>volunteer_activism</span>
-              <span style={{ borderBottom: '1px dashed #ad2b53' }}>Become a Rence Material Sponsor</span>
+              <span className="material-icons" style={{ fontSize: '20px' }}>volunteer_activism</span> Become a Rence Material Sponsor
             </Link>
           </div>
 
@@ -351,26 +344,27 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer style={{
-        background: '#f8f9fa', borderTop: '1px solid #e8eaed',
-        padding: '2.5rem clamp(1.5rem, 5vw, 4rem)',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem',
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <footer className="footer-custom">
+        <div className="footer-links">
+          <div className="footer-links-row">
+            <Link href="/become-a-rencematerial-sponsor" style={{ fontSize: 'inherit', color: '#152d61', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600 }}>
+              <span className="material-icons" style={{ fontSize: '14px' }}>volunteer_activism</span> Sponsor
+            </Link>
+            <a href="https://github.com/davidabalaku/material" style={{ fontSize: 'inherit', color: '#9aa0a6', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span className="material-icons" style={{ fontSize: '14px' }}>code</span> Fork Me On GitHub
+            </a>
+          </div>
+          <div className="footer-links-row justify-content-center">
+            <span style={{ fontSize: 'inherit', color: '#9aa0a6', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span className="material-icons" style={{ fontSize: '14px', color: '#ea4335' }}>favorite</span> Made by Rence
+            </span>
+          </div>
+        </div>
+
+        <div className="footer-brand">
           <Logo size={24} />
           <span style={{ fontWeight: 600, fontSize: '0.9rem', color: '#5f6368' }}>
             Rence Material <span style={{ color: '#9aa0a6', fontWeight: 400 }}>v1.5.0</span>
-          </span>
-        </div>
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          <Link href="/become-a-rencematerial-sponsor" style={{ fontSize: '0.8rem', color: '#152d61', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600 }}>
-            <span className="material-icons" style={{ fontSize: '16px' }}>volunteer_activism</span> Sponsor
-          </Link>
-          <a href="https://github.com/davidabalaku/material" style={{ fontSize: '0.8rem', color: '#9aa0a6', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <span className="material-icons" style={{ fontSize: '16px' }}>code</span> Fork on GitHub
-          </a>
-          <span style={{ fontSize: '0.8rem', color: '#9aa0a6', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <span className="material-icons" style={{ fontSize: '16px', color: '#ea4335' }}>favorite</span> Made by Rence
           </span>
         </div>
       </footer>
@@ -401,6 +395,94 @@ export default function Home() {
           justify-content: center;
           position: relative;
           min-height: 500px;
+        }
+
+        .hero-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: #DBDEE6;
+          border-radius: 50px;
+          padding: 6px 16px;
+          margin-bottom: 2rem;
+          line-height: 1.2;
+        }
+
+        .hero-badge-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #152d61;
+          flex-shrink: 0;
+        }
+
+        .hero-badge-text {
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: #152d61;
+          letter-spacing: 0.05em;
+          line-height: inherit;
+        }
+
+        .footer-custom {
+          background: #f8f9fa;
+          border-top: 1px solid #e8eaed;
+          padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+
+        .footer-brand {
+          order: 1;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .footer-links {
+          order: 2;
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          font-size: 0.8rem;
+        }
+
+        .footer-links-row {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        @media (max-width: 767.98px) {
+          .hero-badge {
+            padding: 4px 12px;
+            margin-bottom: 1.5rem;
+          }
+          .hero-badge-text {
+            font-size: 0.65rem;
+          }
+          .footer-custom {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 1rem;
+            gap: 1.25rem;
+          }
+          .footer-brand { order: 2; }
+          .footer-links { 
+            order: 1;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            width: 100%;
+          }
+          .footer-links-row {
+            width: 100%;
+            justify-content: center;
+            gap: 1rem;
+          }
         }
 
         @media (max-width: 991.98px) {
