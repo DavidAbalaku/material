@@ -9,7 +9,7 @@
     "dev:clean": "if exist .next rmdir /s /q .next && next dev",
     "dev:no-turbo": "next dev --turbo=false",
     "build": "npm run build:css && npm run build:js && next build",
-    "build:css": "sass --style=compressed lib/material/scss/material-core.scss dist/css/rence-material.min.css",
+    "build:css": "sass --style=compressed --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions --silence-deprecation=if-function lib/material/scss/material-core.scss dist/css/rence-material.min.css",
     "build:js": "npx terser lib/material/js/material-core.js --compress --mangle -o dist/js/rence-material.min.js",
     "start": "next start",
     "lint": "eslint"
