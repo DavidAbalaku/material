@@ -25,7 +25,7 @@ export default function Alerts() {
       <div className="row g-4 g-lg-5">
         <div className="col-12 col-xl-9 overflow-hidden">
           <div className="mb-5">
-            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#1a73e8 !important' }}>Alerts</h1>
+            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#152d61 !important' }}>Alerts</h1>
             <div className="d-flex flex-wrap align-items-end gap-3">
               <p className="text-muted opacity-75 mb-0" style={{ maxWidth: '700px', fontSize: '1.2rem', lineHeight: 1.6 }}>
                 Provide contextual feedback messages for typical user actions with flexible alert messages.
@@ -73,7 +73,7 @@ export default function Alerts() {
             <div className="bg-white p-5 rounded-4 shadow-sm border border-bottom-0">
               <div className="alert alert-warning alert-dismissible fade show mb-0 mx-auto border shadow-none" role="alert" style={{ maxWidth: '600px' }}>
                 <strong>Heads up!</strong> You should check in on some of those fields below.
-                <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" className="btn-close"></button>
               </div>
             </div>
 
@@ -91,7 +91,7 @@ export default function Alerts() {
 
         {/* TOC */}
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #152d61', paddingLeft: '1.5rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column gap-2 fw-medium small">
               <li className="nav-item"><a className="nav-link p-0 text-secondary hover-primary" href="#examples">EXAMPLES</a></li>
@@ -101,7 +101,7 @@ export default function Alerts() {
         </div>
       </div>
       <style jsx>{`
-        .hover-primary:hover { color: #1a73e8 !important; }
+        .hover-primary:hover { color: #152d61 !important; }
       `}</style>
     </div>
   );

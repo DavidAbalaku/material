@@ -63,7 +63,7 @@ export default function Navs() {
         <div className="col-12 col-xl-9 overflow-hidden">
           <h1 className="mb-3 fw-normal" style={{ color: '#0f172a', fontSize: 'clamp(1.8rem,4vw,2.5rem)' }}>Navs</h1>
           <p className="text-muted mb-5" style={{ lineHeight: 1.7, fontSize: 'clamp(0.95rem,2vw,1.1rem)' }}>
-            Bootstrap provides several navigation components. The base <code>.nav</code> component is flexible for building tabs, pills, and vertical lists. For full tab-panel behaviour, see the <a href="/docs/components/tabs" className="text-decoration-none" style={{ color: '#1a73e8' }}>Tabs</a> page.
+            Bootstrap provides several navigation components. The base <code>.nav</code> component is flexible for building tabs, pills, and vertical lists. For full tab-panel behaviour, see the <a href="/docs/components/tabs" className="text-decoration-none" style={{ color: '#152d61' }}>Tabs</a> page.
           </p>
 
           <div id="tabs" className="mb-5">
@@ -113,7 +113,7 @@ export default function Navs() {
         </div>
 
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #152d61', paddingLeft: '1rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column">
               {[['#tabs','Tabs'],['#pills','Pills'],['#vertical','Vertical']].map(([href,label])=>(

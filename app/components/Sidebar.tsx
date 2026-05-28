@@ -23,6 +23,7 @@ export default function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose:
         { name: 'Colours', href: '/docs/components/colours' },
         { name: 'Data Tables', href: '/docs/components/tables' },
         { name: 'Dialogs', href: '/docs/components/dialogs' },
+        { name: 'Forms', href: '/docs/components/forms' },
         { name: 'Elevation & Shadows', href: '/docs/components/elevation' },
         { name: 'Expansion Panels', href: '/docs/components/expansion-panels' },
         { name: 'Icons', href: '/docs/components/icons' },
@@ -81,7 +82,7 @@ export default function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose:
                          style={{ 
                            fontSize: '0.85rem',
                            color: isActive ? '#ffffff' : '#5f6368',
-                           backgroundColor: isActive ? '#1a73e8' : 'transparent',
+                           backgroundColor: isActive ? '#152d61' : 'transparent',
                            borderRadius: '4px',
                            fontWeight: isActive ? '600' : '400',
                          }}
@@ -98,13 +99,13 @@ export default function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose:
       </div>
       <style jsx>{`
         .nav-item-m3:hover {
-          background-color: rgba(26, 115, 232, 0.08) !important;
-          color: #1a73e8 !important;
+          background-color: rgba(21, 45, 97, 0.08) !important;
+          color: #152d61 !important;
         }
         .nav-item-m3.active:hover {
-          background-color: #1b66c9 !important;
+          background-color: #0d1c3c !important;
           color: #ffffff !important;
-          box-shadow: 0 4px 12px rgba(26, 115, 232, 0.2);
+          box-shadow: 0 4px 12px rgba(21, 45, 97, 0.2);
         }
       `}</style>
     </aside>

@@ -52,11 +52,11 @@ export default function Badges() {
             <h2 className="fw-normal mb-3" style={{ color: '#0f172a', fontSize: 'clamp(1.4rem,3vw,1.75rem)' }}>Examples</h2>
             <p className="text-muted small mb-4" style={{ lineHeight: 1.6 }}>Badges automatically scale with the parent element's font size. Use contextual <code>.bg-*</code> classes for colour.</p>
             <div className="bg-light p-4 rounded-top border border-bottom-0">
-              <div className="mb-3 d-flex flex-column gap-2">
-                <h1 className="mb-0">H1 Heading <span className="badge bg-secondary ms-2">New</span></h1>
-                <h2 className="mb-0">H2 Heading <span className="badge bg-secondary ms-2">New</span></h2>
-                <h4 className="mb-0">H4 Heading <span className="badge bg-secondary ms-2">New</span></h4>
-                <h6 className="mb-0">H6 Heading <span className="badge bg-secondary ms-2">New</span></h6>
+              <div className="mb-3">
+                {['h1','h2','h4','h6'].map(tag => {
+                  const Tag = tag as any;
+                  return <Tag key={tag} className="mb-2">{tag.toUpperCase()} <span className="badge bg-secondary ms-2">New</span></Tag>;
+                })}
               </div>
               <div className="d-flex flex-wrap gap-2 mt-4">
                 {variants.map(v => <span key={v.cls} className={`badge ${v.cls}`}>{v.label}</span>)}
@@ -92,7 +92,7 @@ export default function Badges() {
         </div>
 
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #152d61', paddingLeft: '1rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column">
               {[['#examples','Examples'],['#pill','Pill badges'],['#on-buttons','On buttons']].map(([href,label])=>(

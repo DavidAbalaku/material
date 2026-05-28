@@ -7,10 +7,10 @@ export default function Home() {
   const features = [
     {
       svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" /></svg>,
-      color: '#1a73e8',
-      bg: '#e8f0fe',
+      color: '#152d61',
+      bg: '#DBDEE6',
       title: 'Google Blue Identity',
-      desc: <>A tonal color system built on Google's <span style={{ color: '#1a73e8', fontWeight: 700 }}>#1a73e8</span>, with M3-compliant containers, surfaces, and state layers.</>,
+      desc: <>A tonal color system built on Google's <span style={{ color: '#152d61', fontWeight: 700 }}>#152d61</span>, with M3-compliant containers, surfaces, and state layers.</>,
     },
     {
       svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7" rx="3.5"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>,
@@ -39,24 +39,16 @@ export default function Home() {
     <div style={{ fontFamily: "'Roboto', sans-serif", color: '#202124', background: '#fff' }}>
 
       {/* ── NAVBAR ── */}
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid #f1f3f4',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '0 clamp(1.5rem, 5vw, 4rem)', height: '64px',
-      }}>
+      <nav className="navbar-custom">
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Logo size={28} />
           <span style={{ fontWeight: 700, fontSize: '1.1rem', letterSpacing: '-0.02em', color: '#202124' }}>
-            Rence <span style={{ color: '#1a73e8' }}>Material</span>
+            Rence <span style={{ color: '#152d61' }}>Material</span>
           </span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-          <a href="#features" style={{ fontSize: '0.8125rem', color: '#5f6368', textDecoration: 'none', fontWeight: 500 }}>Features</a>
-          <a href="#getting-started" style={{ fontSize: '0.8125rem', color: '#5f6368', textDecoration: 'none', fontWeight: 500 }}>Get started</a>
           <Link href="/docs/introduction" style={{
-            background: '#1a73e8', color: '#fff', padding: '6px 24px',
+            background: '#152d61', color: '#fff', padding: '6px 24px',
             borderRadius: '4px', fontSize: '0.8125rem', fontWeight: 600,
             textDecoration: 'none', letterSpacing: '0.04em', display: 'inline-flex', alignItems: 'center'
           }}>
@@ -66,25 +58,18 @@ export default function Home() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{
-        minHeight: '100vh', paddingTop: '64px',
-        display: 'flex', alignItems: 'center',
-        background: '#fff',
-        overflow: 'hidden', position: 'relative',
-      }}>
+      <section className="hero-section">
         {/* Left: Text */}
-        <div style={{
-          flex: 1, padding: 'clamp(2rem, 4vw, 4rem) clamp(1.5rem, 5vw, 5rem)',
-          maxWidth: '620px', position: 'relative', zIndex: 2,
-        }}>
+        <div className="hero-content">
           {/* Pill badge */}
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: '#e8f0fe', borderRadius: '50px',
+            background: '#DBDEE6', borderRadius: '50px',
             padding: '6px 16px', marginBottom: '2rem',
+            lineHeight: 1
           }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#1a73e8', display: 'inline-block' }}></span>
-            <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#1a73e8', letterSpacing: '0.06em' }}>
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#152d61', flexShrink: 0 }}></span>
+            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#152d61', letterSpacing: '0.05em', lineHeight: '1' }}>
               BASED ON GOOGLE MATERIAL DESIGN · BOOTSTRAP 5
             </span>
           </div>
@@ -98,36 +83,56 @@ export default function Home() {
             margin: '0 0 1rem 0',
           }}>
             Build with<br />
-            <span style={{ color: '#1a73e8', fontWeight: 400 }}>Material</span><br />
+            <span style={{ color: '#152d61', fontWeight: 400 }}>Material</span><br />
             <span style={{ fontWeight: 300 }}>Design.</span>
           </h1>
 
           <p style={{
             fontSize: 'clamp(1rem, 2vw, 1.15rem)', lineHeight: 1.6,
-            color: '#5f6368', maxWidth: '480px', margin: '0 0 2rem 0', fontWeight: 400,
+            color: '#5f6368', maxWidth: '480px', margin: '0 auto 1.5rem auto', fontWeight: 400,
           }}>
             A fully responsive, Google Material 3 skin for Bootstrap 5.
             Drop in one CSS file — every component transforms instantly.
           </p>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '2rem', alignItems: 'flex-start' }}>
+          <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', width: '100%' }}>
+            <Link href="/become-a-rencematerial-sponsor" style={{ 
+              color: '#ad2b53', 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              gap: '8px', 
+              textDecoration: 'none',
+              fontSize: '0.875rem',
+              fontWeight: 500,
+              width: '100%',
+              textAlign: 'center'
+            }}>
+              <span className="material-icons" style={{ fontSize: '20px' }}>volunteer_activism</span>
+              <span style={{ borderBottom: '1px dashed #ad2b53' }}>Become a Rence Material Sponsor</span>
+            </Link>
+          </div>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '2.5rem', alignItems: 'flex-start' }}>
             <div className="d-flex flex-column align-items-start">
               <Link href="/docs/introduction" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
-                background: '#1a73e8', color: '#fff',
+                background: '#152d61', color: '#fff',
                 padding: '0 24px', borderRadius: '4px',
                 fontWeight: 600, fontSize: '0.8125rem', letterSpacing: '0.04em',
-                textDecoration: 'none', boxShadow: '0 2px 8px rgba(26,115,232,0.3)',
+                textDecoration: 'none', boxShadow: '0 2px 8px rgba(21, 45, 97, 0.3)',
                 transition: 'all 0.2s', minHeight: '40px'
               }}>
                 <span className="material-icons" style={{ fontSize: '18px' }}>menu_book</span>
                 GET STARTED
               </Link>
-              <Scribble text="Start here!" arrow="up" className="mt-3 ms-2" />
+              <div className="mobile-hide">
+                <Scribble text="Start here!" arrow="up" className="mt-3 ms-2" />
+              </div>
             </div>
             <a href="#" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: 'transparent', color: '#1a73e8',
+              background: 'transparent', color: '#152d61',
               padding: '0 24px', borderRadius: '4px',
               fontWeight: 600, fontSize: '0.8125rem', letterSpacing: '0.04em',
               textDecoration: 'none', border: '1px solid #dadce0', minHeight: '40px'
@@ -138,7 +143,7 @@ export default function Home() {
           </div>
 
           {/* Stats row */}
-          <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
+          <div className="stats-row" style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
             {[
               { val: 'v1.5', label: 'Stable release' },
               { val: 'BS5', label: 'Bootstrap core' },
@@ -153,22 +158,18 @@ export default function Home() {
         </div>
 
         {/* Right: UI Component Showcase (No AI Art) */}
-        <div style={{
-          flex: 1, minHeight: '100vh',
-          position: 'relative', overflow: 'hidden',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>
+        <div className="hero-showcase">
           {/* Background tint */}
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%)',
+            background: 'linear-gradient(135deg, #f8f9fa 0%, #DBDEE6 100%)',
           }}></div>
 
           <div style={{ position: 'relative', width: '480px', height: '480px' }}>
             {/* Background Container Sheet */}
             <div style={{
               position: 'absolute', width: '420px', height: '360px',
-              borderRadius: '24px', background: '#d2e3fc',
+              borderRadius: '24px', background: '#DBDEE6',
               top: '60px', left: '30px',
               transform: 'rotate(-4deg)',
               boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.5)',
@@ -183,7 +184,7 @@ export default function Home() {
               transform: 'rotate(2deg)',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#1a73e8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#152d61', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
                   <span className="material-icons" style={{ fontSize: '20px' }}>person</span>
                 </div>
                 <div>
@@ -196,8 +197,8 @@ export default function Home() {
               <div style={{ background: '#f8f9fa', height: '8px', borderRadius: '4px', width: '70%', marginBottom: '24px' }}></div>
 
               <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
-                <div style={{ padding: '8px 16px', color: '#1a73e8', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.04em' }}>CANCEL</div>
-                <div style={{ padding: '8px 24px', background: '#e8f0fe', color: '#1a73e8', borderRadius: '40px', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.04em' }}>SAVE</div>
+                <div style={{ padding: '8px 16px', color: '#152d61', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.04em' }}>CANCEL</div>
+                <div style={{ padding: '8px 24px', background: '#DBDEE6', color: '#152d61', borderRadius: '40px', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.04em' }}>SAVE</div>
               </div>
             </div>
 
@@ -217,7 +218,7 @@ export default function Home() {
             {/* Floating Floating Action Button (FAB) */}
             <div style={{
               position: 'absolute', width: '64px', height: '64px',
-              borderRadius: '20px', background: '#1a73e8',
+              borderRadius: '20px', background: '#152d61',
               bottom: '140px', right: '50px',
               boxShadow: '0 8px 16px rgba(26,115,232,0.3)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -232,9 +233,9 @@ export default function Home() {
               border: '1px solid #dadce0', borderRadius: '4px', padding: '16px 16px 8px 16px',
               top: '220px', left: '-10px',
               boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-              borderBottom: '2px solid #1a73e8'
+              borderBottom: '2px solid #152d61'
             }}>
-              <div style={{ fontSize: '0.7rem', color: '#1a73e8', fontWeight: 500, position: 'absolute', top: '-8px', left: '12px', background: '#fff', padding: '0 4px' }}>Email address</div>
+              <div style={{ fontSize: '0.7rem', color: '#152d61', fontWeight: 500, position: 'absolute', top: '-8px', left: '12px', background: '#fff', padding: '0 4px' }}>Email address</div>
               <div style={{ fontSize: '0.9rem', color: '#202124' }}>rence@bliteoc.com</div>
             </div>
 
@@ -248,13 +249,15 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div style={{
               fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em',
-              color: '#1a73e8', textTransform: 'uppercase', marginBottom: '12px',
+              color: '#152d61', textTransform: 'uppercase', marginBottom: '12px',
             }}>WHY RENCE MATERIAL</div>
             <div className="mb-4 text-center">
               <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 300, letterSpacing: '-0.03em', color: '#202124', margin: 0 }}>
                 Everything you need to build<br />with Material Design.
               </h2>
-              <Scribble text="Modern & Clean" arrow="up" className="mt-4" />
+              <div className="mobile-hide">
+                <Scribble text="Modern & Clean" arrow="up" className="mt-4" />
+              </div>
             </div>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
@@ -287,7 +290,7 @@ export default function Home() {
           <div style={{ flex: 1, minWidth: '260px' }}>
             <div style={{
               fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em',
-              color: '#1a73e8', textTransform: 'uppercase', marginBottom: '12px',
+              color: '#152d61', textTransform: 'uppercase', marginBottom: '12px',
             }}>QUICK START</div>
             <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.03em', color: '#202124', margin: '0 0 1rem 0' }}>
               One file.<br />Endless possibilities.
@@ -298,7 +301,7 @@ export default function Home() {
             </p>
             <Link href="/docs/introduction" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: '#1a73e8', color: '#fff',
+              background: '#152d61', color: '#fff',
               padding: '8px 24px', borderRadius: '4px',
               fontWeight: 600, fontSize: '0.8125rem', letterSpacing: '0.04em',
               textDecoration: 'none',
@@ -360,7 +363,10 @@ export default function Home() {
           </span>
         </div>
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          <a href="#" style={{ fontSize: '0.8rem', color: '#9aa0a6', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <Link href="/become-a-rencematerial-sponsor" style={{ fontSize: '0.8rem', color: '#152d61', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600 }}>
+            <span className="material-icons" style={{ fontSize: '16px' }}>volunteer_activism</span> Sponsor
+          </Link>
+          <a href="https://github.com/davidabalaku/material" style={{ fontSize: '0.8rem', color: '#9aa0a6', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
             <span className="material-icons" style={{ fontSize: '16px' }}>code</span> Fork on GitHub
           </a>
           <span style={{ fontSize: '0.8rem', color: '#9aa0a6', display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -369,6 +375,83 @@ export default function Home() {
         </div>
       </footer>
 
+      <style jsx>{`
+        .hero-section {
+          display: flex;
+          align-items: center;
+          min-height: 100vh;
+          padding-top: 64px;
+          background: #fff;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .hero-content {
+          flex: 1;
+          padding: clamp(2rem, 5vw, 5rem);
+          max-width: 700px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .hero-showcase {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          min-height: 500px;
+        }
+
+        @media (max-width: 991.98px) {
+          .hero-section {
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 4rem;
+          }
+          .hero-content {
+            padding: 5rem 1.5rem 3rem 1.5rem;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .hero-content h1, .hero-content p {
+            text-align: center;
+          }
+          .stats-row {
+            justify-content: center !important;
+          }
+          .navbar-custom {
+            padding: 0 1rem !important;
+            gap: 10px;
+          }
+          .hero-showcase {
+            display: none; 
+          }
+          .mobile-hide {
+            display: none !important;
+          }
+        }
+
+        .navbar-custom {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 100;
+          background: rgba(255,255,255,0.92);
+          backdrop-filter: blur(12px);
+          border-bottom: 1px solid #f1f3f4;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 clamp(1.5rem, 5vw, 4rem);
+          height: 64px;
+        }
+      `}</style>
     </div>
   );
 }
+
+

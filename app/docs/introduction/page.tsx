@@ -65,19 +65,19 @@ export default function Introduction() {
 
         {/* ── MAIN LEFT COLUMN ── */}
         <div className="col-12 col-xl-9 overflow-hidden">
-          <h1 className="mb-3 fw-light" style={{ color: '#1a73e8', fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>Introduction</h1>
+          <h1 className="mb-3 fw-light" style={{ color: '#152d61', fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>Introduction</h1>
           <p className="text-muted mb-5 lead opacity-75">
             Get started with <strong>Rence Material</strong>, a cross-platform and fully responsive front-end interface based on Google Material Design, built using Bootstrap 5.
           </p>
 
           {/* CONTENTS */}
-          <h2 id="contents" className="fw-light mb-4" style={{ color: '#1a73e8' }}>Contents</h2>
+          <h2 id="contents" className="fw-light mb-4" style={{ color: '#152d61' }}>Contents</h2>
 
           {/* Precompiled */}
           <div id="precompiled" className="mb-5">
             <h3 className="h5 fw-medium mb-3 text-dark">Precompiled code</h3>
             <p className="text-muted small mb-4">
-              The Rence Material <a href="#" className="text-decoration-none fw-bold" style={{ color: '#1a73e8' }}>precompiled code download</a> includes the following compiled CSS and JavaScript:
+              The Rence Material <a href="#" className="text-decoration-none fw-bold" style={{ color: '#152d61' }}>precompiled code download</a> includes the following compiled CSS and JavaScript:
             </p>
             <CodeBlock code={precompiledTree} language="Structure" />
           </div>
@@ -86,13 +86,13 @@ export default function Introduction() {
           <div id="source" className="mb-5">
             <h3 className="h5 fw-medium mb-3 text-dark">Source code</h3>
             <p className="text-muted small mb-4">
-              The Rence Material <a href="#" className="text-decoration-none fw-bold" style={{ color: '#1a73e8' }}>source code download</a> includes the source SCSS files and raw modules:
+              The Rence Material <a href="#" className="text-decoration-none fw-bold" style={{ color: '#152d61' }}>source code download</a> includes the source SCSS files and raw modules:
             </p>
             <CodeBlock code={sourceTree} language="Structure" />
           </div>
 
           {/* Important globals */}
-          <h2 id="globals" className="fw-light mb-4 pt-2" style={{ color: '#1a73e8' }}>Important globals</h2>
+          <h2 id="globals" className="fw-light mb-4 pt-2" style={{ color: '#152d61' }}>Important globals</h2>
           
           <div id="box-sizing" className="mb-5">
             <h3 className="h5 fw-medium mb-3 text-dark">Box-sizing</h3>
@@ -102,7 +102,7 @@ export default function Introduction() {
           </div>
 
           <div id="starter-template" className="mb-5">
-            <h2 className="fw-light mb-3 pt-2" style={{ color: '#1a73e8' }}>Starter template</h2>
+            <h2 className="fw-light mb-3 pt-2" style={{ color: '#152d61' }}>Starter template</h2>
             <div className="d-flex flex-wrap align-items-center gap-3 mb-3">
               <p className="text-muted mb-0">Use this minimal HTML boilerplate to start your project with Rence Material.</p>
               <Scribble text="Copy & Paste to start!" arrow="left" />
@@ -113,7 +113,7 @@ export default function Introduction() {
 
         {/* ── TOC (STICKY) ── */}
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #152d61', paddingLeft: '1.5rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column gap-2 fw-medium small">
                <li className="nav-item"><a className="nav-link p-0 text-secondary" href="#contents">CONTENTS</a></li>

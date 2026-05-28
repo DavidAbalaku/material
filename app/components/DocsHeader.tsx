@@ -25,12 +25,12 @@ export default function DocsHeader({ toggleSidebar }: { toggleSidebar: () => voi
           <nav aria-label="breadcrumb" className="ms-4 d-none d-md-block">
             <ol className="breadcrumb mb-0 small fw-medium">
               <li className="breadcrumb-item"><span className="text-secondary opacity-75">Docs</span></li>
-              <li className="breadcrumb-item active text-capitalize" style={{ color: '#1a73e8' }}>{pageTitle}</li>
+              <li className="breadcrumb-item active text-capitalize" style={{ color: '#152d61' }}>{pageTitle}</li>
             </ol>
           </nav>
 
           <div className="ms-auto d-flex align-items-center">
-            <a href="https://github.com" className="btn btn-primary btn-sm rounded-pill px-4 d-none d-sm-flex align-items-center gap-2 shadow-none" style={{ backgroundColor: '#1a73e8', border: 'none' }}>
+            <a href="https://github.com" className="btn btn-primary btn-sm rounded-pill px-4 d-none d-sm-flex align-items-center gap-2 shadow-none" style={{ backgroundColor: '#152d61', border: 'none' }}>
                <span className="small fw-bold">Github</span>
             </a>
           </div>

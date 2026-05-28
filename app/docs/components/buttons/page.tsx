@@ -21,7 +21,7 @@ export default function Buttons() {
         <div className="col-12 col-xl-9 overflow-hidden">
           {/* Header Section - Modern Light Typography */}
           <div className="mb-5 pb-3">
-            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#1a73e8 !important' }}>Buttons</h1>
+            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#152d61 !important' }}>Buttons</h1>
             <div className="d-flex flex-wrap align-items-end gap-3">
               <p className="text-muted opacity-75 mb-0" style={{ maxWidth: '700px', fontSize: '1.2rem', lineHeight: 1.6 }}>
                 Buttons allow users to take actions, and make choices, with a single tap. Material 3 buttons are categorized by their emphasis and role.
@@ -77,17 +77,31 @@ export default function Buttons() {
                </div>
                <div className="p-4 bg-light-subtle">
                  <p className="text-secondary small mb-2">
-                    M3 FABs use a large rounded corner (16px) instead of a circle. They are now fully responsive and scale appropriately on smaller screens.
+                    M3 FABs use a large rounded corner (12px to 16px) instead of a circle. They are now fully responsive and scale appropriately on smaller screens.
                  </p>
                  <Scribble text="Responsive scaling!" arrow="left" />
                </div>
+            </div>
+
+            <div className="mt-4">
+               <h6 className="text-uppercase fw-bold text-muted small mb-3" style={{ fontSize: '0.65rem', letterSpacing: '0.1em' }}>FAB Implementation</h6>
+               <CodeBlock code={`<!-- Standard FAB -->
+<button class="btn btn-fab shadow-sm">
+  <i class="material-icons">add</i>
+</button>
+
+<!-- Extended FAB -->
+<button class="btn btn-fab btn-fab-extended shadow-sm">
+  <i class="material-icons">edit</i>
+  <span>Compose</span>
+</button>`} />
             </div>
           </section>
         </div>
 
         {/* TOC */}
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #152d61', paddingLeft: '1.5rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Navigation</div>
             <ul className="nav flex-column gap-2 fw-medium small">
               <li className="nav-item"><a className="nav-link p-0 text-secondary hover-primary" href="#m3-variants">M3 VARIANTS</a></li>
@@ -97,7 +111,7 @@ export default function Buttons() {
         </div>
       </div>
       <style jsx>{`
-        .hover-primary:hover { color: #1a73e8 !important; }
+        .hover-primary:hover { color: #152d61 !important; }
       `}</style>
     </div>
   );

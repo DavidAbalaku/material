@@ -1,2 +1,15 @@
 // Rence Material - Main Stylesheet
-@use "../lib/material/scss/material-core";
+
+// 1. BRAND YOUR FRAMEWORK (The "Magic Link")
+// To change your theme globally, simply change the hex code below.
+// Every component (buttons, ripples, tonal backgrounds, sidebars, FABs) 
+// will automatically recalculate its colors to match.
+$primary: #152d61; 
+
+// 2. Load Core
+// We use @import here for maximum compatibility with Next.js/Turbopack.
+@import "../lib/material/scss/material-core";
+
+// 3. Extra Assets
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');

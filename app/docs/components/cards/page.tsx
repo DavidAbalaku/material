@@ -23,7 +23,7 @@ export default function Cards() {
       <div className="row g-4 g-lg-5">
         <div className="col-12 col-xl-9 overflow-hidden">
           <div className="mb-5 pb-3">
-            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#1a73e8 !important' }}>Cards</h1>
+            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#152d61 !important' }}>Cards</h1>
             <div className="d-flex flex-wrap align-items-end gap-3">
               <p className="text-muted opacity-75 mb-0" style={{ maxWidth: '700px', fontSize: '1.2rem', lineHeight: 1.6 }}>
                  Cards contain content and actions about a single subject. M3 introduces three types of cards: Elevated, Filled, and Outlined.
@@ -65,7 +65,7 @@ export default function Cards() {
             <div className="card shadow-none border rounded-4 overflow-hidden">
                <div className="bg-white p-5 d-flex justify-content-center border-bottom text-center">
                   <div className="card card-elevated border-0 rounded-4 overflow-hidden shadow-sm" style={{ maxWidth: '340px' }}>
-                     <div style={{ height: '160px', background: 'linear-gradient(135deg, #1a73e8, #8ab4f8)' }}></div>
+                     <div style={{ height: '160px', background: 'linear-gradient(135deg, #152d61, #8ab4f8)' }}></div>
                      <div className="card-body p-4 text-start">
                        <h5 className="fw-bold mb-1">Our Changing Planet</h5>
                        <p className="text-muted small mb-4">Explore the most significant shifts happening across our globe today.</p>
@@ -86,7 +86,7 @@ export default function Cards() {
 
         {/* TOC */}
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #152d61', paddingLeft: '1.5rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Navigation</div>
             <ul className="nav flex-column gap-2 fw-medium small">
               <li className="nav-item"><a className="nav-link p-0 text-secondary hover-primary" href="#m3-variants">M3 VARIANTS</a></li>
@@ -96,7 +96,7 @@ export default function Cards() {
         </div>
       </div>
       <style jsx>{`
-        .hover-primary:hover { color: #1a73e8 !important; }
+        .hover-primary:hover { color: #152d61 !important; }
       `}</style>
     </div>
   );

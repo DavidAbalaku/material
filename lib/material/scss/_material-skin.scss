@@ -1,23 +1,33 @@
 // Rence Material - M3 State Layers & Component Skins
 
 // 1. STATE LAYERS (M3 Standard)
-.btn, .nav-link, .list-group-item {
+.btn,
+.nav-link,
+.list-group-item {
   position: relative;
   overflow: hidden;
   transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
-  
+
   &::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: currentColor;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.1s linear;
   }
-  
-  &:hover::before { opacity: 0.08; }
-  &:focus::before { opacity: 0.12; }
+
+  &:hover::before {
+    opacity: 0.08;
+  }
+
+  &:focus::before {
+    opacity: 0.12;
+  }
 }
 
 // 1.5 JAVASCRIPT RIPPLE EFFECT (M3 Coordinate Animation)
@@ -32,38 +42,53 @@
 }
 
 @keyframes rence-ripple-anim {
-  0% { transform: scale(0); opacity: 0.2; }
-  100% { transform: scale(2.5); opacity: 0; }
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
 
-// 2. BUTTONS (M3 SPECIFIC - Google Blue Edition)
+// 2. BUTTONS (M3 SPECIFIC)
 .btn-primary {
-  background-color: #1a73e8;
-  color: #fff;
+  background-color: $primary;
+  color: $on-primary;
   border: none;
   box-shadow: none;
-  &:hover { 
-    background-color: #1b66c9; // M3 subtle hover
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    color: #fff; 
+
+  &:hover {
+    background-color: mix($primary, #000, 90%); // M3 subtle darken
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: $on-primary;
   }
+
   &:active {
-    background-color: #185abc;
+    background-color: mix($primary, #000, 80%);
     transform: scale(0.98);
   }
 }
 
 .btn-tonal {
-  background-color: #e8f0fe; // Primary Container
-  color: #174ea6;
+  background-color: $primary-container; 
+  color: $on-primary-container;
   border: none;
-  &:hover { background-color: #d2e3fc; }
+
+  &:hover {
+    background-color: mix($primary-container, #000, 95%);
+  }
 }
 
 .btn-outline-primary {
-  border: 1px solid #dadce0; 
-  color: #1a73e8;
-  &:hover { background-color: rgba(26, 115, 232, 0.04); }
+  border: 1px solid $outline;
+  color: $primary;
+
+  &:hover {
+    background-color: rgba($primary, 0.04);
+  }
 }
 
 // 2.5 FABs (Floating Action Buttons) - Standardized to 40px as per USER preference
@@ -75,14 +100,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px !important; // Slightly smaller radius for 40px button
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.05);
-  background-color: #1a73e8;
-  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: $primary;
+  color: $on-primary;
   border: none;
-  
+
   &:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15), 0 4px 8px rgba(0,0,0,0.05);
-    background-color: #1557b0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: mix($primary, #000, 90%);
     transform: translateY(-1px);
   }
 
@@ -98,11 +123,17 @@
 .card {
   background-color: #ffffff;
   border-color: #dadce0;
+
   &-elevated {
     background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    &:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateY(-1px);
+    }
   }
+
   &-filled {
     background-color: #f8f9fa;
     border: none;
@@ -112,14 +143,16 @@
 // 4. DOCS SHELL & SIDEBAR REFINEMENTS
 .docs-sidebar {
   background-color: #f8f9fa !important;
+
   .nav-link {
     &.active {
-      background-color: #1a73e8 !important;
-      color: #ffffff !important;
+      background-color: $primary !important;
+      color: $on-primary !important;
+
       // Fixed hover on active: maintain contrast 
       &:hover {
-        background-color: #1b66c9 !important;
-        color: #ffffff !important;
+        background-color: mix($primary, #000, 90%) !important;
+        color: $on-primary !important;
       }
     }
   }
@@ -130,6 +163,65 @@
 }
 
 // 5. TYPOGRAPHY
-.display-large { font-size: 3.5rem; letter-spacing: -0.04em; }
-.headline-medium { font-size: 1.75rem; letter-spacing: -0.01em; }
-.label-large { font-size: 0.875rem; font-weight: 500; }
+.display-large {
+  font-size: 3.5rem;
+  letter-spacing: -0.04em;
+}
+
+.headline-medium {
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+}
+
+.label-large {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+// 6. ACCORDIONS (M3 Flush Style)
+.accordion {
+  --bs-accordion-border-color: #{$outline};
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-active-bg: #{$primary-container};
+  --bs-accordion-active-color: #{$on-primary-container};
+  
+  &-item {
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin-bottom: 8px;
+    border: 1px solid $outline;
+  }
+
+  &-button {
+    font-weight: 500;
+    padding: 1.25rem;
+    &:not(.collapsed) {
+      box-shadow: none;
+    }
+  }
+}
+
+// 7. NAVBARS (M3 Surface Center)
+.navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: $surface;
+  
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+// 8. TOASTS (M3 Elevation)
+.toast {
+  border-radius: 12px;
+  border: none;
+  background-color: #313033; // M3 Dark Surface
+  color: #f4eff4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  
+  .btn-close {
+    filter: invert(1);
+  }
+}

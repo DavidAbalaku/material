@@ -1,11 +1,13 @@
 // Rence Material - Material 3 Standards (Google Blue Edition)
 // Inspired by Daemonite's Material UI
 
-// 1. COLORS - Using Google Blue tonal system
-$primary: #1a73e8; // Google Blue
-$on-primary: #ffffff;
-$primary-container: #d2e3fc;
-$on-primary-container: #0d1c33;
+// 1. COLORS - Rence Identity
+$primary: #152d61 !default;
+$on-primary: #ffffff !default;
+
+// M3 Tonal Scaling: Dynamically generate containers based on primary
+$primary-container: mix($primary, #ffffff, 15%) !default; // Subtle light container
+$on-primary-container: mix($primary, #000000, 40%) !default; // Dark text for light container
 
 $secondary: #5f6368; // Google Gray
 $secondary-container: #e8eaed;

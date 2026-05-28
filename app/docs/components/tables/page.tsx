@@ -44,13 +44,13 @@ const fullTableCode = `<!-- Card-wrapped interactive data table -->
 </div>`;
 
 const rows = [
-  { initials: 'JD', name: 'John Doe', email: 'john.doe@example.com', role: 'Lead Developer', status: 'Active', color: '#1a73e8' },
+  { initials: 'JD', name: 'John Doe', email: 'john.doe@example.com', role: 'Lead Developer', status: 'Active', color: '#152d61' },
   { initials: 'JS', name: 'Jane Smith', email: 'jane.smith@example.com', role: 'UX Designer', status: 'On Leave', color: '#f59e0b' },
   { initials: 'MW', name: 'Mike Wilson', email: 'mike.wilson@example.com', role: 'DevOps Engineer', status: 'Offline', color: '#64748b' },
 ];
 
 const statusStyle: Record<string, { bg: string; color: string }> = {
-  'Active':   { bg: 'rgba(26,115,232,0.12)', color: '#1a73e8' },
+  'Active':   { bg: 'rgba(26,115,232,0.12)', color: '#152d61' },
   'On Leave': { bg: 'rgba(245,158,11,0.12)', color: '#b45309' },
   'Offline':  { bg: 'rgba(100,116,139,0.12)', color: '#475569' },
 };
@@ -61,7 +61,7 @@ export default function DataTables() {
       <div className="row g-4 g-lg-5">
         <div className="col-12 col-xl-9 overflow-hidden">
           <div className="mb-5 pb-3">
-            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#1a73e8 !important' }}>Data Tables</h1>
+            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#152d61 !important' }}>Data Tables</h1>
             <div className="d-flex flex-wrap align-items-end gap-3">
               <p className="text-muted opacity-75 mb-0" style={{ maxWidth: '700px', fontSize: '1.2rem', lineHeight: 1.6 }}>
                  Data tables display sets of raw data. They feature a toolbar header, sortable columns, and pagination, following Material 3 guidelines.
@@ -131,7 +131,7 @@ export default function DataTables() {
         </div>
 
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #152d61', paddingLeft: '1.5rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Navigation</div>
             <ul className="nav flex-column">
               <li className="nav-item mb-2"><a className="nav-link p-0 text-secondary hover-primary" href="#basic-row">ANATOMY</a></li>
@@ -140,7 +140,7 @@ export default function DataTables() {
         </div>
       </div>
       <style jsx>{`
-        .hover-primary:hover { color: #1a73e8 !important; }
+        .hover-primary:hover { color: #152d61 !important; }
       `}</style>
     </div>
   );

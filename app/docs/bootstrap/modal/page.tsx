@@ -61,7 +61,7 @@ export default function Modal() {
           </p>
 
           <div className="alert alert-info border-start border-4 border-primary bg-light py-2 px-3 mb-5 small text-muted rounded-2">
-            <strong className="text-dark">Tip:</strong> For Material-style alert dialogs (simple confirm/cancel popups), see the <a href="/docs/components/dialogs" className="text-decoration-none" style={{ color: '#1a73e8' }}>Dialogs</a> page.
+            <strong className="text-dark">Tip:</strong> For Material-style alert dialogs (simple confirm/cancel popups), see the <a href="/docs/components/dialogs" className="text-decoration-none" style={{ color: '#152d61' }}>Dialogs</a> page.
           </div>
 
           <div id="example" className="mb-5">
@@ -106,7 +106,7 @@ export default function Modal() {
         </div>
 
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #152d61', paddingLeft: '1rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column">
               {[['#example','Example'],['#scrollable','Scrollable'],['#sizes','Optional sizes']].map(([href,label])=>(

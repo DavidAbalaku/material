@@ -54,7 +54,7 @@ export default function Typography() {
             <h2 className="h4 fw-bold mb-4 text-dark">Font weight</h2>
             <div className="bg-white p-5 rounded-4 shadow-sm border border-bottom-0">
               {[['fw-light','Light 300'],['fw-normal','Regular 400'],['fw-medium','Medium 500'],['fw-bold','Bold 700']].map(([cls, label]) => (
-                <p key={cls} className={`${cls} mb-3`} style={{ fontSize: '1.5rem', color: '#004d40' }}>{label}</p>
+                <p key={cls} className={`${cls} mb-3`} style={{ fontSize: '1.5rem', color: '#152d61' }}>{label}</p>
               ))}
             </div>
             <div className="p-4 border border-top-0 bg-light-subtle mb-0">
@@ -65,7 +65,7 @@ export default function Typography() {
         </div>
 
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #00bfa5', paddingLeft: '1rem' }}>
+          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #152d61', paddingLeft: '1rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column">
               <li className="nav-item"><a className="nav-link px-0 py-1" href="#scale" style={{ color: '#475569', fontSize: '0.88rem' }}>Type scale</a></li>

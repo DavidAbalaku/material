@@ -20,7 +20,7 @@ export default function TextFields() {
       <div className="row g-4 g-lg-5">
         <div className="col-12 col-xl-9 overflow-hidden">
           <div className="mb-5 pb-3">
-            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#1a73e8 !important' }}>Text Fields</h1>
+            <h1 className="mb-2 fw-light display-4 text-primary" style={{ letterSpacing: '-0.04em', color: '#152d61 !important' }}>Text Fields</h1>
             <div className="d-flex flex-wrap align-items-end gap-3">
               <p className="text-muted opacity-75 mb-0" style={{ maxWidth: '700px', fontSize: '1.2rem', lineHeight: 1.6 }}>
                  Text fields let users enter and edit text. Rence Material utilizes modern Material 3 states and floating labels.
@@ -77,7 +77,7 @@ export default function TextFields() {
         </div>
 
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #1a73e8', paddingLeft: '1.5rem' }}>
+          <nav className="sticky-top" style={{ top: '100px', borderLeft: '2px solid #152d61', paddingLeft: '1.5rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Navigation</div>
             <ul className="nav flex-column">
               <li className="nav-item mb-2"><a className="nav-link p-0 text-secondary hover-primary transition-all" href="#filled">FILLED STYLE</a></li>
@@ -87,7 +87,7 @@ export default function TextFields() {
         </div>
       </div>
       <style jsx>{`
-        .hover-primary:hover { color: #1a73e8 !important; }
+        .hover-primary:hover { color: #152d61 !important; }
         .transition-all { transition: all 0.2s ease-in-out; }
       `}</style>
     </div>

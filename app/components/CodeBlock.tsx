@@ -34,8 +34,8 @@ export default function CodeBlock({ code, language = 'HTML' }: CodeBlockProps) {
         >
           {copied ? (
             <>
-              <i className="material-icons" style={{ fontSize: '15px', color: '#1a73e8' }}>check</i>
-              <span style={{ color: '#1a73e8' }}>Copied!</span>
+              <i className="material-icons" style={{ fontSize: '15px', color: '#152d61' }}>check</i>
+              <span style={{ color: '#152d61' }}>Copied!</span>
             </>
           ) : (
             <>

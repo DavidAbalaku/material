@@ -1,21 +1,21 @@
 export default function Logo({ size = 32, className = '' }: { size?: number, className?: string }) {
   return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 100 100" 
-      fill="none" 
-      xmlns="http://www.w3.org/2000/svg" 
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
       {/* Top Floating Dimension */}
-      <path d="M50 14 L86 32 L50 50 L14 32 Z" fill="#E8F0FE" />
-      
+      <path d="M50 14 L86 32 L50 50 L14 32 Z" fill="#DBDEE6" />
+
       {/* Left Structured Block */}
       <path d="M14 36 L48 53 V86 L14 68 Z" fill="#4285F4" />
-      
+
       {/* Right Core Block */}
-      <path d="M86 36 L52 53 V86 L86 68 Z" fill="#1A73E8" />
+      <path d="M86 36 L52 53 V86 L86 68 Z" fill="#152d61" />
     </svg>
   );
 }

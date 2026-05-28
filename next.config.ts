@@ -4,10 +4,10 @@ import path from 'path';
 const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'node_modules')],
-    // Force quiet dependencies and silence specific deprecations
     quietDeps: true,
+    // Add specific deprecations to silence if quietDeps isn't enough
+    silenceDeprecations: ['import', 'color-functions', 'if-function', 'global-builtin'],
   },
-  // Suppress hydration warnings caused by browser extensions like 'bis_skin_checked'
   reactStrictMode: true,
 };
 

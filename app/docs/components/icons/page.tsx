@@ -65,13 +65,13 @@ export default function Icons() {
           <div id="browser" className="mb-5">
             <h2 className="fw-normal mb-3" style={{ color: '#0f172a', fontSize: 'clamp(1.4rem,3vw,1.75rem)' }}>Common icons</h2>
             <p className="text-muted small mb-4" style={{ lineHeight: 1.6 }}>
-              A selection of the most commonly used Material Icons. For the full library, visit <a href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#00bfa5' }}>fonts.google.com/icons</a>.
+              A selection of the most commonly used Material Icons. For the full library, visit <a href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#152d61' }}>fonts.google.com/icons</a>.
             </p>
             <div className="row g-3 mb-5">
               {commonIcons.map(icon => (
                 <div key={icon} className="col-6 col-sm-4 col-md-3 col-lg-2">
                   <div className="bg-light border rounded-3 p-3 text-center d-flex flex-column align-items-center gap-2" style={{ minHeight: '90px' }}>
-                    <i className="material-icons" style={{ fontSize: '28px', color: '#00897b' }}>{icon}</i>
+                    <i className="material-icons" style={{ fontSize: '28px', color: '#152d61' }}>{icon}</i>
                     <span className="text-muted" style={{ fontSize: '0.65rem', wordBreak: 'break-all' }}>{icon}</span>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function Icons() {
 
         {/* TOC */}
         <div className="d-none d-xl-block col-xl-3">
-          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #00bfa5', paddingLeft: '1rem' }}>
+          <nav className="sticky-top" style={{ top: '84px', borderLeft: '2px solid #152d61', paddingLeft: '1rem' }}>
             <div className="small fw-bold text-uppercase mb-3 text-muted" style={{ letterSpacing: '0.1em', fontSize: '0.7rem' }}>Contents</div>
             <ul className="nav flex-column">
               {[['#setup','Setup & usage'],['#browser','Common icons'],['#sizes','Sizes'],['#colours','Colours'],['#in-buttons','Icons in buttons']].map(([href,label])=>(

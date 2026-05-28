@@ -8,7 +8,7 @@ interface ScribbleProps {
   color?: string;
 }
 
-export default function Scribble({ text, className = '', style = {}, arrow, color = '#1a73e8' }: ScribbleProps) {
+export default function Scribble({ text, className = '', style = {}, arrow, color = '#152d61' }: ScribbleProps) {
   return (
     <div 
       className={`d-inline-flex flex-column align-items-center position-relative ${className}`} 

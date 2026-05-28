@@ -9,23 +9,42 @@ export default function ClientShell({ children }: { children: React.ReactNode })
   const pathname = usePathname();
 
   useEffect(() => {
-    // @ts-ignore
-    import('bootstrap/dist/js/bootstrap.bundle.min.js');
-  }, []);
+    // Dynamic import to avoid SSR issues
+    const initBootstrap = async () => {
+      // @ts-ignore
+      const bootstrap = await import('bootstrap/dist/js/bootstrap.bundle.min.js');
+      
+      // Initialize all tooltips
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      tooltipTriggerList.forEach(tooltipTriggerEl => {
+        // @ts-ignore
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Initialize all popovers
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+      popoverTriggerList.forEach(popoverTriggerEl => {
+        // @ts-ignore
+        new bootstrap.Popover(popoverTriggerEl);
+      });
+    };
+
+    initBootstrap();
+  }, [pathname]); // Re-run whenever the route changes
   
   // Only show the Documentation UI if we are in the /docs path
   const isDocs = pathname.startsWith('/docs');
 
   if (!isDocs) {
     return (
-      <div className="landing-shell min-vh-100 bg-white">
+      <div className="landing-shell min-vh-100 bg-white" suppressHydrationWarning>
         {children}
       </div>
     );
   }
 
   return (
-    <div className="docs-shell min-vh-100 d-flex flex-column w-100 bg-white">
+    <div className="docs-shell min-vh-100 d-flex flex-column w-100 bg-white" suppressHydrationWarning>
       {/* 1. STICKY HEADER (DOCS ONLY) */}
       <DocsHeader toggleSidebar={() => setSidebarOpen(true)} />
       
