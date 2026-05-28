@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     "frontend framework",
     "open source CSS framework",
   ],
-  authors: [{ name: "David Abalaku", url: "https://github.com/davidabalaku" }],
-  creator: "David Abalaku",
+  authors: [{ name: "david abalaku", url: "https://github.com/davidabalaku" }],
+  creator: "david abalaku",
   metadataBase: new URL("https://davidabalaku.github.io/material"),
   alternates: {
     canonical: "/",
