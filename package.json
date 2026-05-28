@@ -1,7 +1,7 @@
 {
   "name": "rence-material",
   "version": "1.0.0",
-  "description": "A high-performance Material Design 3 framework for Bootstrap 5. Pure CSS interactions, M3 tonal system, and fully responsive.",
+  "description": "A powerful, high-performance front-end framework based on Google Material UI Design. It fuses the functional stability of **Bootstrap 5** with the visual elegance of **Material Design 3**.",
   "homepage": "https://davidabalaku.github.io/material",
   "author": "david abalaku",
   "private": true,

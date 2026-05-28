@@ -1,6 +1,6 @@
 # Rence Material
 
-A powerful, high-performance front-end framework that fuses the functional stability of **Bootstrap 5** with the visual elegance of **Material Design 3**.
+A powerful, high-performance front-end framework based on Google Material UI Design. It fuses the functional stability of **Bootstrap 5** with the visual elegance of **Material Design 3**.
 
 **[📖 Official Documentation & Live Demos](https://davidabalaku.github.io/material)**  
 **[💖 Support Development (Patreon)](https://www.patreon.com/cw/davidabalaku)**

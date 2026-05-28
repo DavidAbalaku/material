@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Rence Material",
   },
   description:
-    "Rence Material is a high-performance CSS & JS UI framework that brings Google Material Design 3 to Bootstrap 5. Drop in one file — every component transforms instantly.",
+    "Rence Material is a high-performance framework based on Google Material UI Design for Bootstrap 5. Drop in one file — every component transforms into Material 3 instantly.",
   keywords: [
     "Rence Material",
     "Material Design Bootstrap",
